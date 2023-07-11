@@ -1,0 +1,5 @@
+---
+## /* vim: set ft=yaml tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+sqlite3_package: "sqlite3"
+sqlite3_package_state: "present"

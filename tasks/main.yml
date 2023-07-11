@@ -1,0 +1,7 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Install the package"
+  ansible.builtin.package:
+    name: "{{ sqlite3_package }}"
+    state: "{{ sqlite3_package_state }}"
