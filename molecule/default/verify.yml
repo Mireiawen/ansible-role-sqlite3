@@ -1,0 +1,19 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: 'Verify'
+  hosts: 'all'
+  become: true
+
+  tasks:
+  - name: 'Try to get the sqlite3 path'
+    ansible.builtin.shell: 'which sqlite3'
+    args:
+      executable: '/bin/bash'
+    changed_when: false
+    register: 'sqlite_path'
+
+  - name: 'Verify the path'
+    ansible.builtin.assert:
+      that:
+      - '"sqlite" in sqlite_path.stdout'
